@@ -2,9 +2,9 @@
 title: "Hello, World!"
 date: 2023-02-03T15:30:30-04:00
 categories:
-	- blog
+  - blog
 tags:
-	- personal
+  - personal
 ---
 
 Welcome to my digital odyssey! As a computer science student, I'm constantly seeking new challenges and exploring the many facets of the digital world. I've always been fascinated by coding, robotics, and tech, and I'm excited to share my journey with you. Through this blog, I'll be documenting my adventures in these areas, as well as my experiences with gaming, history, and outdoor activities.
