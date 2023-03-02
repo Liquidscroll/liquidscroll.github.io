@@ -14,7 +14,7 @@ Welcome to my projects page! Here you'll find a collection of my latest coding a
 	</thead>
 	<tbody>
 		<tr>
-			<th>[Feline-Playing Robot]({{ site.baseurl }}{% link 2023-03-03-comp-vision-mbot.md %})</th>
+			<th>[Feline-Playing Robot](_posts/2023-03-03-comp-vision-mbot.md)</th>
 			<th>Developed a vision-based robot that plays with cats using object detection, showing the potential of robotics and AI in pet interaction.</th>
 		</tr>
 	</tbody>
