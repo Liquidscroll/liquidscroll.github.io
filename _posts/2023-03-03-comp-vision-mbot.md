@@ -10,6 +10,7 @@ tags:
   - computer-vision
   - c++
   - python
+  - feline
 ---
 
 As part of a Robotics class at Deakin University, I undertook a project to develop a robot that could autonomously play with my cats, using vision-based object detection. In this project, I aimed to use a pre-trained object detection model from the Python library Tensorflow to enable the robot to detect and interact with a ball, and then launch it for my cats to play with.
