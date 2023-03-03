@@ -56,7 +56,7 @@ plugins:
 
 author:
   name   : "Jonathan Tynan"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/bio-photo.jpeg"
   bio    : "Discovering the world of coding, robotics, and more. By @liquidscroll"
   links:
     - label: "GitHub"
