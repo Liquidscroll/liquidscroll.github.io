@@ -17,5 +17,9 @@ Welcome to my projects page! Here you'll find a collection of my latest coding a
 			<th><a href="https://liquidscroll.github.io/blog/project/comp-vision-mbot/">Feline-Playing Robot</a></th>
 			<th>Developed a vision-based robot that plays with cats using object detection, showing the potential of robotics and AI in pet interaction.</th>
 		</tr>
+		<tr>
+			<th><a href="https://liquidscroll.github.io/blog/project/feline-feeding-habits/">Fekube Feeding Habits</a></th>
+			<th>Developed a weight-based feeding station to monitor and control the habits of my pets.</th>
+		</tr>
 	</tbody>
 </table>
