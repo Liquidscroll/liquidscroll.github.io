@@ -53,6 +53,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-pdf-embed
 
 author:
   name   : "Jonathan Tynan"
@@ -75,6 +76,9 @@ footer:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin/in/jojaty"
+    - label: "My Resume"
+      icon: "fab fa-fw fa-file-user"
+      url: "https://liquidscroll.github.io/resume.html"
 
 defaults:
   # _posts
