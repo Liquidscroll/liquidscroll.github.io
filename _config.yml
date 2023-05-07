@@ -65,6 +65,9 @@ author:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin/in/jojaty"
+    - label: "Resume"
+      icon: "fab fa-fw fa-file-text"
+      url: "https://liquidscroll.github.io/resume"
 
 footer:
   links:
@@ -75,8 +78,8 @@ footer:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin/in/jojaty"
-    - label: "My Resume"
-      icon: "fab fa-fw fa-file-user"
+    - label: "Resume"
+      icon: "fab fa-fw fa-file-text"
       url: "https://liquidscroll.github.io/resume"
 
 defaults:
