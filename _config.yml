@@ -79,7 +79,7 @@ footer:
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin/in/jojaty"
     - label: "Resume"
-      icon: "fab fa-fw fa-file-text-o"
+      icon: "fab fa-fw fa-file-pdf"
       url: "https://liquidscroll.github.io/resume"
 
 defaults:
