@@ -78,7 +78,7 @@ footer:
       url: "https://linkedin/in/jojaty"
     - label: "My Resume"
       icon: "fab fa-fw fa-file-user"
-      url: "https://liquidscroll.github.io/resume.html"
+      url: "https://liquidscroll.github.io/resume"
 
 defaults:
   # _posts
