@@ -3,4 +3,4 @@ permalink: /resume/
 title: "Resume"
 ---
 
-{% pdf "/assets/pdf/Resume-JonathanTynan.pdf" %}
+<object data="/assets/pdf/Resume-JonathanTynan.pdf" width="1000" height="1000" type='application/pdf'></object>
