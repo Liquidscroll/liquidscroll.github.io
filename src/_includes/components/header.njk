@@ -1,0 +1,46 @@
+<header>
+    <div class="navbar bg-base-100 flex space-x-6">
+        <div class="navbar-start">
+            <!-- Dropdown for mobile view -->
+            <div class="dropdown lg:hidden">
+                <button tabindex="0" role="button" class="btn btn-ghost">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </button>
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"> 
+                    <li><a href="/pages/about/index.html" class="btn btn-ghost w-full text-left text-primary">About</a></li>
+                    <li><a href="/blog/index.html" class="btn btn-ghost w-full text-left text-primary">Blog</a></li>
+                    <li><a href="/pages/projects/index.html" class="btn btn-ghost w-full text-left text-primary">Projects</a></li>
+                    <li><a href="/pages/resume/index.html" class="btn btn-ghost w-full text-left text-primary">Resume</a></li>
+                </ul>
+            </div>
+
+            <!-- Logo -->
+            <a href="/" class="btn btn-ghost text-primary text-xl">ls</a>
+        </div>
+
+        <!-- Buttons for larger screens -->
+        <div class="navbar-center hidden lg:flex space-x-4">
+            <a href="/pages/about/index.html" class="btn btn-ghost {% if title == 'About' %}btn-active{% endif %} text-primary">About</a>
+            <a href="/blog/index.html" class="btn btn-ghost {% if title == 'Blog' %}btn-active{% endif %} text-primary">Blog</a>
+            <a href="/pages/projects/index.html" class="btn btn-ghost {% if title == 'Projects' %}btn-active{% endif %} text-primary">Projects</a>
+            <a href="/pages/resume/index.html" class="btn btn-ghost {% if title == 'Resume' %}btn-active{% endif %} text-primary">Resume</a>
+        </div>
+        {#<div class="navbar-start">
+            <a href="/" class="btn btn-ghost text-primary text-xl">ls</a>
+        </div>#}
+        {#
+        <div role="tablist" class="lg:flex tabs tabs-lifted navbar-end">
+            <a href="/pages/about/index.html"
+                class="link-info tab tab-bordered {% if title == 'About' %}tab-active{% endif %}">About</a>
+            <a href="/blog/index.html"
+                class="link-info tab tab-bordered {% if title == 'Blog' %}tab-active{% endif %}">Blog</a>
+            <a href="/pages/projects/index.html"
+                class="link-info tab tab-bordered {% if title == 'Projects' %}tab-active{% endif %}">Projects</a>
+            <a href="/pages/resume/index.html"
+                class="link-info tab tab-bordered {% if title == 'Resume' %}tab-active{% endif %}">Resume</a>
+        </div>
+        #}
+    </div>
+</header>

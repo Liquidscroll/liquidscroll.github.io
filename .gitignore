@@ -1,0 +1,7 @@
+# Node modules
+node_modules/
+
+# Output
+_site/
+
+.cache/

@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inter-regular-text {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.code-block {
+    white-space: pre-line;
+}
+
+header a {
+    color: theme('colors.light_cyan');
+    font-weight: 600;
+    text-decoration: none;
+}
+/*a {*/
+/*    color: theme('colors.');*/
+/*    font-weight: 600;*/
+/*    text-decoration: none;*/
+/*}*/
