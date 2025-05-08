@@ -8,21 +8,24 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     permissions:
       contents: write
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
+      - uses: actions/checkout@v3
 
-      - name: Persist bun cache
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Persist npm cache
         uses: actions/cache@v3
         with:
-          path: ~/.bun
-          key: ${{ runner.os }}-bun-${{ hashFiles('**/package.json') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
 
       - name: Persist Eleventy .cache
         uses: actions/cache@v3
@@ -30,8 +33,8 @@ jobs:
           path: ./.cache
           key: ${{ runner.os }}-eleventy-fetch-cache
 
-      - run: bun install
-      - run: bun run build
+      - run: npm install
+      - run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
