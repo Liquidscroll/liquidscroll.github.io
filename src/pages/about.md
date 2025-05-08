@@ -19,8 +19,8 @@ challenges of the digital world.
 
 ## About My Site
 
-The colour scheme for this site is inspired my Monokai, specifically the palette from
+The colour scheme for this site is inspired by Monokai, specifically the palette from
 [<code>terminal.sexy</code>](https://terminal.sexy).
 
-The site has been built using [<code>11ty</code>](https://11ty.dev),
-[<code>TailwindCSS</code>](https://tailwindcss.com), and [<code>DaisyUI</code>](https://daisyui.com)
+The site has been built using [<code>11ty</code>](https://11ty.dev) and
+[<code>WebTUI</code>](https://webtui.ironclad.sh/) components.
