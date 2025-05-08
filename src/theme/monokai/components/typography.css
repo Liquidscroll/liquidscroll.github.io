@@ -1,0 +1,27 @@
+@layer components {
+  [data-webtui-theme="monokai"] {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--monokai10);
+    }
+
+    p,
+    blockquote,
+    l1 [is-~="typography-block"] {
+      a {
+        color: var(--monokai11);
+        text-decoration: underline;
+      }
+      a:hover {
+        color: var(--monokai7);
+      }
+      code {
+        color: var(--monokai8);
+      }
+    }
+  }
+}

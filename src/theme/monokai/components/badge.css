@@ -1,0 +1,59 @@
+@layer components {
+  [data-webtui-theme="monokai"] [is-~="badge"] {
+    /* same mapping as button variants */
+    &[variant-="monokai0"] {
+      --badge-color: var(--background0);
+      --badge-text: var(--foreground0);
+    }
+    &[variant-="monokai1"] {
+      --badge-color: var(--background1);
+      --badge-text: var(--foreground0);
+    }
+    &[variant-="monokai2"] {
+      --badge-color: var(--background2);
+      --badge-text: var(--foreground0);
+    }
+    &[variant-="monokai3"] {
+      --badge-color: var(--background3);
+      --badge-text: var(--foreground0);
+    }
+
+    &[variant-="monokai6"] {
+      --badge-color: var(--foreground0);
+      --badge-text: var(--background0);
+    }
+    &[variant-="monokai5"] {
+      --badge-color: var(--foreground1);
+      --badge-text: var(--background0);
+    }
+    &[variant-="monokai4"] {
+      --badge-color: var(--foreground2);
+      --badge-text: var(--background0);
+    }
+
+    &[variant-="monokai7"] {
+      --badge-color: var(--monokai7);
+      --badge-text: var(--background0);
+    }
+    &[variant-="monokai8"] {
+      --badge-color: var(--monokai8);
+      --badge-text: var(--background0);
+    }
+    &[variant-="monokai9"] {
+      --badge-color: var(--monokai9);
+      --badge-text: var(--background0);
+    }
+    &[variant-="monokai10"] {
+      --badge-color: var(--monokai10);
+      --badge-text: var(--background0);
+    }
+    &[variant-="monokai11"] {
+      --badge-color: var(--monokai11);
+      --badge-text: var(--background0);
+    }
+    &[variant-="monokai12"] {
+      --badge-color: var(--monokai12);
+      --badge-text: var(--background0);
+    }
+  }
+}

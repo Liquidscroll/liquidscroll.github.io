@@ -1,0 +1,30 @@
+@layer base {
+  [data-webtui-theme="monokai"] {
+    /* ---- Monokai palette ---- */
+    --monokai0: #272822;
+    --monokai1: #2d2e27;
+    --monokai2: #383931;
+    --monokai3: #49483e;
+
+    --monokai4: #e8e8d3;
+    --monokai5: #f2f2e8;
+    --monokai6: #f8f8f2;
+
+    --monokai7: #f92672;
+    --monokai8: #fd971f;
+    --monokai9: #e6db74;
+    --monokai10: #a6e22e;
+    --monokai11: #66d9ef;
+    --monokai12: #ae81ff;
+
+    /* WebTUI aliases */
+    --background0: var(--monokai0);
+    --background1: var(--monokai1);
+    --background2: var(--monokai2);
+    --background3: var(--monokai3);
+
+    --foreground0: var(--monokai6);
+    --foreground1: var(--monokai5);
+    --foreground2: var(--monokai4);
+  }
+}

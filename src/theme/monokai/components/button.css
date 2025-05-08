@@ -1,0 +1,61 @@
+@layer components {
+  [data-webtui-theme="monokai"] button, [is-~="button"] {
+    /* dark shades */
+    &[variant-="monokai0"] {
+      --button-primary: var(--background0);
+      --button-secondary: var(--foreground0);
+    }
+    &[variant-="monokai1"] {
+      --button-primary: var(--background1);
+      --button-secondary: var(--foreground0);
+    }
+    &[variant-="monokai2"] {
+      --button-primary: var(--background2);
+      --button-secondary: var(--foreground0);
+    }
+    &[variant-="monokai3"] {
+      --button-primary: var(--background3);
+      --button-secondary: var(--foreground0);
+    }
+
+    /* light shades */
+    &[variant-="monokai6"] {
+      --button-primary: var(--foreground0);
+      --button-secondary: var(--background0);
+    }
+    &[variant-="monokai5"] {
+      --button-primary: var(--foreground1);
+      --button-secondary: var(--background0);
+    }
+    &[variant-="monokai4"] {
+      --button-primary: var(--foreground2);
+      --button-secondary: var(--background0);
+    }
+
+    /* accents */
+    &[variant-="monokai7"] {
+      --button-primary: var(--monokai7);
+      --button-secondary: var(--background0);
+    }
+    &[variant-="monokai8"] {
+      --button-primary: var(--monokai8);
+      --button-secondary: var(--background0);
+    }
+    &[variant-="monokai9"] {
+      --button-primary: var(--monokai9);
+      --button-secondary: var(--background0);
+    }
+    &[variant-="monokai10"] {
+      --button-primary: var(--monokai10);
+      --button-secondary: var(--background0);
+    }
+    &[variant-="monokai11"] {
+      --button-primary: var(--monokai11);
+      --button-secondary: var(--background0);
+    }
+    &[variant-="monokai12"] {
+      --button-primary: var(--monokai12);
+      --button-secondary: var(--background0);
+    }
+  }
+}
