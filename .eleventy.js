@@ -1,5 +1,7 @@
 const postcss = require('postcss')
-const tailwindcss = require('tailwindcss')
+const postcssImport = require('postcss-import')
+const fs = requite('node:fs')
+const path = require('node:path')
 const autoprefixer = require('autoprefixer')
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
@@ -9,36 +11,47 @@ module.exports = function(eleventyConfig) {
 		extensions: "html",
         outputDir: "./assets/images/",
 
-		// Add any other Image utility options here:
-
-		// optional, output image formats
+		// output image formats
 		formats: ["webp", "jpeg"],
-		// formats: ["auto"],
 
-		// optional, output image widths
-		// widths: ["auto"],
-
-		// optional, attributes assigned on <img> override these values.
 		defaultAttributes: {
 			loading: "lazy",
 			decoding: "async",
 		},
 	});
+    
+    // process css before eleventy builds
+    eleventyConfig.on('eleventy.before', async() => {
+        const cssSrc = path.join(__dirname, 'src/styles/index.css');
+        const cssDest = path.join(__dirname, '_site/styles/index.css');
 
-    eleventyConfig.addNunjucksAsyncFilter('postcss', (cssCode, done) => {
-        postcss([tailwindcss(require('./tailwind.config.js')), 
-                 autoprefixer()])
-                .process(cssCode, { from: undefined })
-                .then (
-                    (r) => done(null, r.css),
-                    (e) => done(e, null)
-            );                                      
+        const rawCss = fs.readFileSync(cssSrc, "utf8")
+        const dest = path.dirname(cssDest);
+
+        if(!fs.existsSync(dest)) {
+            fs.mkdirSync(dest, { recursive: true });
+        }
+
+        try {
+            const result = await postcss([
+                postcssImport({
+                    path: 'node_nodules',
+                }),
+                autoprefix(),
+            ])
+            .process(rawCss, {from: cssSrc, to: cssDest });
+
+            fs.writeFileSync(cssDest, result.css);
+            console.log("CSS successfully processed and written to:", cssDest);
+        } catch(err) {
+            console.error("Error processing CSS with PostCSS:", err);
+        }
     });
 
     eleventyConfig.addPassthroughCopy("src/assets/pdf");
 
     eleventyConfig.addWatchTarget('styles/**/*.css');
-    
+
     eleventyConfig.addCollection("projects", function(collectionApi) {
         return collectionApi.getFilteredByTag("project");
     });
