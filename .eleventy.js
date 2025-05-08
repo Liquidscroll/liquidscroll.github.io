@@ -1,6 +1,6 @@
 const postcss = require('postcss')
 const postcssImport = require('postcss-import')
-const fs = requite('node:fs')
+const fs = require('node:fs')
 const path = require('node:path')
 const autoprefixer = require('autoprefixer')
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
@@ -37,7 +37,7 @@ module.exports = function(eleventyConfig) {
                 postcssImport({
                     path: 'node_nodules',
                 }),
-                autoprefix(),
+                autoprefixer(),
             ])
             .process(rawCss, {from: cssSrc, to: cssDest });
 
