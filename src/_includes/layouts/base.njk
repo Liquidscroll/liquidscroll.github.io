@@ -1,29 +1,15 @@
 <!DOCTYPE html>
-<html data-theme="monokai" lang="en" class="bg-base-300">
+<html data-webtui-theme="monokai" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/bbefd489b1.js" crossorigin="anonymous"></script>
     <title>{{ title }}</title>
-    {% set css %}
-    {% include "src/styles/index.css" %}
-    {% endset %}
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css');
-        {{ css | postcss | safe }}
-    </style>
+    <link rel="stylesheet" href="styles/index.css"> 
 </head>
-<body class="font-sans bg-base-100 min-h-screen">
-<!--<body class="font-sans bg-base-300 flex items-center justify-center min-h-screen">-->
-    <!--<div class="w-full max-w-4xl">-->
-        {% include "../components/header.njk" %} <!-- Include header template -->
-        <main class="flex flex-col bg-base-300">
-        <!--<main>-->
-            {{ content | safe }} 
-        </main>
-        <div class="bg-base-300 h-4"> </div>
-        {% include "../components/footer.njk" %} <!-- Include footer template -->
-    </div>
-</body>
+    {% include "../components/header.njk" %}
+    <main class="container" box-="square">
+        {{ content | safe }}    
+    </main>
+    {% include "../components/footer.njk" %}
 </html>
