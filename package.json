@@ -5,7 +5,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "bunx @11ty/eleventy",
-    "dev": "bunx eleventy --serve"
+    "dev": "bunx @11ty/eleventy --serve",
+    "prettier": "bunx prettier \"src/**/*.{html,css,js,ts,md,njk}\"",
+    "check": "bun run prettier -- --check",
+    "format": "bun run prettier -- --write"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +24,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.3",
-    "postcss-import": "^16.1.0"
+    "postcss-import": "^16.1.0",
+    "prettier": "^3.5.3"
   }
 }

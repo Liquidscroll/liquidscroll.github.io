@@ -21,7 +21,7 @@ tags: Page
                     {{ post.data.title }}
                 </a>
             </h3>
-            <p class="mb-2 text-base-content" < {{ post.date.toDateString() }}</p>
+            <p class="mb-2 text-base-content">{{ post.date.toDateString() }}</p>
             <div class="post-content text-base-content">
                 <p class="mt-2">
                     {{post.templateContent | truncate(200, true) | safe }}
