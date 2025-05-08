@@ -14,14 +14,13 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^5.0.0",
+    "@webtui/css": "^0.0.5",
     "browser-sync": "^3.0.3",
     "nunjucks": "^3.2.4"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.15",
     "autoprefixer": "^10.4.20",
-    "daisyui": "^4.12.14",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.14"
+    "postcss": "^8.5.3",
+    "postcss-import": "^16.1.0"
   }
 }
