@@ -7,17 +7,19 @@
 @import "@webtui/css/dist/components/button.css" layer(components);
 @import "@webtui/css/dist/components/typography.css" layer(components);
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css");
 
 :root {
-  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 
   --font-mono: "Hack", "Courier New", Consolas, Menlo, monospace;
 }
 
-html, body {
+html,
+body {
   font-family: var(--font-sans);
 }
 
@@ -41,23 +43,28 @@ samp {
 }
 
 img {
-    display: block;
-    margin-inline: auto;
-    width: 95%;
-    height: auto;
+  display: block;
+  margin-inline: auto;
+  width: 95%;
+  height: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-botton: 2lh;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-botton: 2lh;
 }
 
 p {
-    margin-top: 1lh;
-    margin-bottom: 1lh;
+  margin-top: 1lh;
+  margin-bottom: 1lh;
 }
 
 h1.page-title {
-    margin-inline: auto;
+  margin-inline: auto;
 }
 
 .site-nav {
@@ -75,29 +82,30 @@ a {
   font-weight: 700;
 }
 a:hover {
-    color: var(--monokai12);
-    text-decoration: underline;
+  color: var(--monokai12);
+  text-decoration: underline;
 }
 
 a:visited {
-    color: var(--monokai12);
+  color: var(--monokai12);
 }
 
-.site-nav a:visited, a:hover {
-  color: var(--monokai12); 
-    text-decoration: none;
+.site-nav a:visited,
+a:hover {
+  color: var(--monokai12);
+  text-decoration: none;
 }
 
 .nav-links a:hover {
-  color: var(--monokai12); 
-    text-decoration: underline;
+  color: var(--monokai12);
+  text-decoration: underline;
 }
 
 .home-link a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 .nav-links {
-    gap: 1ch;
+  gap: 1ch;
 }
 
 .swatch-grid {
@@ -128,7 +136,7 @@ tbody tr:nth-child(even) {
 
 aside {
   background: var(--background2);
-  border-left: 4px solid var(--monokai10); 
+  border-left: 4px solid var(--monokai10);
   padding: 1ch;
 }
 
@@ -142,14 +150,12 @@ blockquote {
 pre,
 code {
   background: var(--background1);
-
 }
 pre {
   max-width: 90%;
-  margin-inline: auto; 
+  margin-inline: auto;
   padding: 1ch;
   overflow-x: auto;
-
 }
 pre code {
   color: var(--monokai8);
@@ -165,15 +171,15 @@ pre code {
 }
 
 .social-footer {
-    display: flex;
-    gap: 1ch;
-    margin-top: 0.3lh;
-    font-size: 20pt;
+  display: flex;
+  gap: 1ch;
+  margin-top: 0.3lh;
+  font-size: 20pt;
 }
 
 .site-footer p {
-    margin-bottom: 0.5lh;
-    margin-top: 0.5lh;
+  margin-bottom: 0.5lh;
+  margin-top: 0.5lh;
 }
 
 .site-footer a {

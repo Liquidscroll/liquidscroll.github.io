@@ -1,6 +1,7 @@
 ---
 layout: layouts/blog.njk
-title: Blog 
+title: Blog
 tags: page
 ---
+
 # POSTS

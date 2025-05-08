@@ -1,6 +1,7 @@
 ---
 layout: layouts/resume.njk
-title: Resume 
+title: Resume
 tags: page
 ---
+
 ## Placeholder -- resume.md

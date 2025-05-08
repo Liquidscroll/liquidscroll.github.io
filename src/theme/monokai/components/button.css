@@ -1,5 +1,6 @@
 @layer components {
-  [data-webtui-theme="monokai"] button, [is-~="button"] {
+  [data-webtui-theme="monokai"] button,
+  [is-~="button"] {
     /* dark shades */
     &[variant-="monokai0"] {
       --button-primary: var(--background0);

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html data-webtui-theme="monokai" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/bbefd489b1.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/bbefd489b1.js"
+      crossorigin="anonymous"
+    ></script>
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="styles/index.css"> 
-</head>
-    {% include "../components/header.njk" %}
-    <main class="container" box-="square">
-        {{ content | safe }}    
-    </main>
-    {% include "../components/footer.njk" %}
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  {% include "../components/header.njk" %}
+  <main class="container" box-="square">{{ content | safe }}</main>
+  {% include "../components/footer.njk" %}
 </html>
