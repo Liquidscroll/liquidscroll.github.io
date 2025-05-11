@@ -11,16 +11,17 @@
 
     p,
     blockquote,
-    l1 [is-~="typography-block"] {
+    li,
+    [is-~="typography-block"] {
       a {
-        color: var(--monokai11);
+        color: var(--monokai-blue-bright);
         text-decoration: underline;
-      }
-      a:hover {
-        color: var(--monokai7);
+        &:hover {
+          color: var(--monokai-blue);
+        }
       }
       code {
-        color: var(--monokai8);
+        color: var(--monokai-orange-bright);
       }
     }
   }

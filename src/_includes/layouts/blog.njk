@@ -23,18 +23,20 @@ tags: Page
     </div>
   </div>
   {%- endfor -%}
-    <nav aria-labelledby="my-pagination" class="pagination-links">
-      {% if pagination.href.previous %}
-      <a href="{{ pagination.href.previous }}" is-="button" box-="round">Prev Post</a>
-      {% else %}
-      <span is-="button" box-="round">Prev Post</span> 
-      {% endif %}
+  <nav aria-labelledby="my-pagination" class="pagination-links">
+    {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}" is-="button" box-="round"
+      >Prev Post</a
+    >
+    {% else %}
+    <span is-="button" box-="round">Prev Post</span>
+    {% endif %}
 
-      <!-- Next Button -->
-      {% if pagination.href.next %}
-      <a href="{{ pagination.href.next }}" is-="button" box-="round">Next Post</a>
-      {% else %}
-      <span is-="button" box-="round">Next Post</span> 
-      {% endif %}
-    </nav>
+    <!-- Next Button -->
+    {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}" is-="button" box-="round">Next Post</a>
+    {% else %}
+    <span is-="button" box-="round">Next Post</span>
+    {% endif %}
+  </nav>
 </div>

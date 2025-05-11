@@ -31,28 +31,36 @@
       --badge-text: var(--background0);
     }
 
-    &[variant-="monokai7"] {
-      --badge-color: var(--monokai7);
+    &[variant-="monokai-base"] {
+      --badge-color: var(--monokai-base);
       --badge-text: var(--background0);
     }
-    &[variant-="monokai8"] {
-      --badge-color: var(--monokai8);
+    &[variant-="monokai-red"] {
+      --badge-color: var(--monokai-red);
       --badge-text: var(--background0);
     }
-    &[variant-="monokai9"] {
-      --badge-color: var(--monokai9);
+    &[variant-="monokai-green"] {
+      --badge-color: var(--monokai-green);
       --badge-text: var(--background0);
     }
-    &[variant-="monokai10"] {
-      --badge-color: var(--monokai10);
+    &[variant-="monokai-orange"] {
+      --badge-color: var(--monokai-orange);
       --badge-text: var(--background0);
     }
-    &[variant-="monokai11"] {
-      --badge-color: var(--monokai11);
+    &[variant-="monokai-blue"] {
+      --badge-color: var(--monokai-blue);
       --badge-text: var(--background0);
     }
-    &[variant-="monokai12"] {
-      --badge-color: var(--monokai12);
+    &[variant-="monokai-purple"] {
+      --badge-color: var(--monokai-purple);
+      --badge-text: var(--background0);
+    }
+    &[variant-="monokai-cyan"] {
+      --badge-color: var(--monokai-cyan);
+      --badge-text: var(--background0);
+    }
+    &[variant-="monokai-gray"] {
+      --badge-color: var(--monokai-gray);
       --badge-text: var(--background0);
     }
   }

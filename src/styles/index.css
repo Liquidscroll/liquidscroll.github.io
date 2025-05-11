@@ -87,8 +87,8 @@ p {
 }
 
 p.pagination-post-date {
-    margin-inline: auto;
-    text-align: center;
+  margin-inline: auto;
+  text-align: center;
 }
 
 code,
@@ -241,8 +241,8 @@ blockquote p {
 }
 
 nav.pagination-links {
-    margin-line: auto;
-    text-align: center;
+  margin-line: auto;
+  text-align: center;
 }
 
 /*
@@ -251,8 +251,13 @@ nav.pagination-links {
  *
  */
 
-h1, h2, h3, h4, h5, h6 {
-    color: var(--monokai-green-bright);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--monokai-green-bright);
 }
 
 /*
@@ -325,8 +330,4 @@ h1, h2, h3, h4, h5, h6 {
 .social-footer a {
   font-size: 2rem;
   color: var(--foreground0);
-}
-
-[box-] {
-  --box-border-color: var(--foreground2);
 }
