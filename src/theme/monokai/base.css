@@ -10,12 +10,23 @@
     --monokai5: #f2f2e8;
     --monokai6: #f8f8f2;
 
-    --monokai7: #f92672;
-    --monokai8: #fd971f;
-    --monokai9: #e6db74;
-    --monokai10: #a6e22e;
-    --monokai11: #66d9ef;
-    --monokai12: #ae81ff;
+    --monokai-base-bright: $75715e;
+    --monokai-base: #272822
+
+    --monokai-red-bright: #f92672;
+    --monokai-red: #c72259;
+    --monokai-green-bright: #a6e22e;
+    --monokai-green: #81b023;
+    --monokai-orange-bright: #f4bf75;
+    --monokai-orange: #c29661;
+    --monokai-blue-bright: #66d9ef;
+    --monokai-blue: #53a8bd;
+    --monokai-purple-bright: #ae81ff;
+    --monokai-purple: #8f70cc;
+    --monokai-cyan-bright: #a1efe4;
+    --monokai-cyan: #7ebdbd;
+    --monokai-gray-bright: #f9f8f5;
+    --monokai-gray: #c4c4c4;
 
     /* WebTUI aliases */
     --background0: var(--monokai0);
