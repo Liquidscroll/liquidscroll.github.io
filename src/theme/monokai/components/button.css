@@ -32,31 +32,30 @@
       --button-primary: var(--foreground2);
       --button-secondary: var(--background0);
     }
-
     /* accents */
-    &[variant-="monokai7"] {
-      --button-primary: var(--monokai7);
-      --button-secondary: var(--background0);
+    &[variant-="monokai-red"] {
+      --button-primary: var(--monokai-red-bright);
+      --button-secondary: var(--monokai-red);
     }
-    &[variant-="monokai8"] {
-      --button-primary: var(--monokai8);
-      --button-secondary: var(--background0);
+    &[variant-="monokai-orange"] {
+      --button-primary: var(--monokai-orange-bright);
+      --button-secondary: var(--monokai-orange);
     }
-    &[variant-="monokai9"] {
-      --button-primary: var(--monokai9);
-      --button-secondary: var(--background0);
+    &[variant-="monokai-green"] {
+      --button-primary: var(--monokai-green-bright);
+      --button-secondary: var(--monokai-green);
     }
-    &[variant-="monokai10"] {
-      --button-primary: var(--monokai10);
-      --button-secondary: var(--background0);
+    &[variant-="mmonokai-blue"] {
+      --button-primary: var(--monokai-blue-bright);
+      --button-secondary: var(--monokai-blue);
     }
-    &[variant-="monokai11"] {
-      --button-primary: var(--monokai11);
-      --button-secondary: var(--background0);
+    &[variant-="mmonokai-cyan"] {
+      --button-primary: var(--monokai-cyan-bright);
+      --button-secondary: var(--monokai-cyan);
     }
-    &[variant-="monokai12"] {
-      --button-primary: var(--monokai12);
-      --button-secondary: var(--background0);
+    &[variant-="mmonokai-purple"] {
+      --button-primary: var(--monokai-purple-bright);
+      --button-secondary: var(--monokai-purple);
     }
   }
 }
