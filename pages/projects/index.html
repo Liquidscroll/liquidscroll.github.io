@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/styles/index.css">
   </head>
   <nav class="site-nav" box-="square">
-  <a class="home-link" href="/" is-="button" variant-="monokai11" box-="round">
+  <a class="home-link" href="/" is-="button" variant-="monokai-red" box-="round">
     <span>
       <em>ls</em>
     </span>
@@ -27,57 +27,49 @@
 </nav>
 
   <main class="container" box-="square">
-<div class="card bg-base-100 mt-2 mb-2 mx-auto" style="max-width: 800px">
-  <div class="card-body">
-    <article class="prose prose-headings:text-primary prose-headings:text-center prose-a:link-info">
-      <h1>Projects</h1>
-      <p>
-        Welcome to my projects page! Here you’ll find a collection of my latest
-        coding and robotics creations, from simple scripts to complex
-        applications. These projects showcase my skills and passions as a
-        computer science student, and I’m excited to share them with you. Take a
-        look around and let me know what you think!
-      </p>
-
-      <table class="table-auto w-full">
-        <thead>
-          <tr>
-            <th class="px-4 py-2">Project</th>
-            <th class="px-4 py-2">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          
-          <tr>
-            <td class="border px-4 py-2">
-              <a href="/posts/mbot-comp-vision/">Developing a Feline-Playing Robot Using Vision-Based Object Detection</a>
-            </td>
-            <td class="border px-4 py-2">
-              <p>As part of a Robotics class at Deakin University, I undertook a project to develop a robot that could autonomously play with my cats, using...
-            </p></td>
-          </tr>
-          
-          <tr>
-            <td class="border px-4 py-2">
-              <a href="/posts/feline-feeding-habits/">Using Weight to Identify and Control Feline Feeding Habits</a>
-            </td>
-            <td class="border px-4 py-2">
-              <p>Cats are notorious for independence, they are difficult to train and impossible to reason with. As such, it can be difficult to prevent a cat eat...
-            </p></td>
-          </tr>
-          
-        </tbody>
-      </table>
-    </article>
-  </div>
-</div>
+<article class="projects-overview">
+  <h1>Projects</h1>
+  <p>
+    Welcome to my projects page! Here you’ll find a collection of my latest
+    coding and robotics creations, from simple scripts to complex applications.
+    These projects showcase my skills and passions as a computer science
+    student, and I’m excited to share them with you. Take a look around and let
+    me know what you think!
+  </p>
+  <table class="projects-table">
+    <thead>
+      <tr>
+        <th>Projects</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>
+          <a href="/posts/mbot-comp-vision/">Developing a Feline-Playing Robot Using Vision-Based Object Detection</a>
+        </td>
+        <td><p>As part of a Robotics class at Deakin University, I undertook a project to develop a robot that could autonomously play with my cats, using vision-based object detection. In this project, I aimed to use a pre-trained object detection model from the Python library Tensorflow to enable the robot to detect and interact with a ball, and then launch...</p></td>
+      </tr>
+      
+      <tr>
+        <td>
+          <a href="/posts/feline-feeding-habits/">Using Weight to Identify and Control Feline Feeding Habits</a>
+        </td>
+        <td><p>Cats are notorious for independence, they are difficult to train and impossible to reason with. As such, it can be difficult to prevent a cat eat food it is not supposed to without completely removing the food from the cat.</p>
+<p>In my case, I have 3 cats and one needs to eat special food which will make the others sick. To solve my problem, a...</p></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</article>
 </main>
   <footer class="site-footer" box-="square">
   <div class="social-footer">
-    <a href="https://github.com/Liquidscroll" target="_blank" class="link">
+    <a href="https://github.com/Liquidscroll" target="_blank">
       <i class="fa-brands fa-github"></i>
     </a>
-    <a href="https://www.linkedin.com/in/jojaty/" target="_blank" class="link">
+    <a href="https://www.linkedin.com/in/jojaty/" target="_blank">
       <i class="fa-brands fa-linkedin"></i>
     </a>
   </div>

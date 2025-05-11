@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/styles/index.css">
   </head>
   <nav class="site-nav" box-="square">
-  <a class="home-link" href="/" is-="button" variant-="monokai11" box-="round">
+  <a class="home-link" href="/" is-="button" variant-="monokai-red" box-="round">
     <span>
       <em>ls</em>
     </span>
@@ -27,45 +27,33 @@
 </nav>
 
   <main class="container" box-="square">
-<div class="card bg-base-100 mt-2 mb-2">
-  <div class="card-body items-center">
-    <h2 class="card-title text-primary">Developing a Feline-Playing Robot Using Vision-Based Object Detection</h2>
-    <h3>Fri Mar 03 2023</h3>
-    <p>As part of a Robotics class at Deakin University, I undertook a project to develop a robot that could autonomously play with my cats, using vision-based object detection. In this project, I aimed to use a pre-trained object detection model from the Python library Tensorflow to enable the robot to detect and interact with a ball, and then launch it for my cats to play with.</p>
+<div class="post-body">
+  <h2>Developing a Feline-Playing Robot Using Vision-Based Object Detection</h2>
+  <h3>Fri Mar 03 2023</h3>
+  <p>As part of a Robotics class at Deakin University, I undertook a project to develop a robot that could autonomously play with my cats, using vision-based object detection. In this project, I aimed to use a pre-trained object detection model from the Python library Tensorflow to enable the robot to detect and interact with a ball, and then launch it for my cats to play with.</p>
 <p>To accomplish this, I used an MBot Ranger, an Arduino-based robotics platform, and a regular home webcam. The images from the webcam were fed into the Tensorflow object detection pipeline, and the screen coordinates of detected objects were filtered to identify the target object, which was a ball. The coordinates were then fed back into the logic of the robot, which moved itself to keep on target before charging forward to launch the ball for my cats.</p>
 <p>While the system could detect and respond appropriately to the ball's location, it was at times temperamental. To improve its accuracy, I needed to create and train a custom object detection model to specify my targets more accurately.</p>
 <p>Despite these difficulties, the project was a success. It provided me with valuable insights into the potential of robotics and AI in pet interaction. Watching the robot track and launch the ball for my cats was an unforgettable experience. The experiment was more than just a robot playing with cats; it was a connection between technology and pets. As I reflect on this project, I realize that the possibilities for pet interaction through robotics and AI are endless. With continued advancements in technology, there is a bright future ahead for safe, interactive play between pets and robots.</p>
 
-    <!-- Pagination Navigation -->
-    <div class="pagination">
-      <nav aria-labelledby="my-pagination" class="flex justify-center space-x-4 mt-4">
-        <div class="join flex space-x-4">
-          <!-- Previous Button -->
-          
-          <a href="/posts/feline-feeding-habits/" class="text-primary join-item btn btn-outline">
-            Previous Post
-          </a>
-          
 
-          <!-- Next Button -->
-          
-          <a href="/posts/" class="text-primary join-item btn btn-outline">
-            Next Post
-          </a>
-          
-        </div>
-        
-      </nav>
-    </div>
-  </div>
+  <nav aria-labelledby="my-pagination" class="pagination-links">
+    
+    <a href="/posts/feline-feeding-habits/" is-="button" box-="round">Prev Post</a>
+    
+
+    <!-- Next Button -->
+    
+    <a href="/posts/" is-="button" box-="round">Next Post </a>
+    
+  </nav>
 </div>
 </main>
   <footer class="site-footer" box-="square">
   <div class="social-footer">
-    <a href="https://github.com/Liquidscroll" target="_blank" class="link">
+    <a href="https://github.com/Liquidscroll" target="_blank">
       <i class="fa-brands fa-github"></i>
     </a>
-    <a href="https://www.linkedin.com/in/jojaty/" target="_blank" class="link">
+    <a href="https://www.linkedin.com/in/jojaty/" target="_blank">
       <i class="fa-brands fa-linkedin"></i>
     </a>
   </div>
