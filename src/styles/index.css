@@ -86,6 +86,11 @@ p {
   margin-inline: auto;
 }
 
+p.pagination-post-date {
+    margin-inline: auto;
+    text-align: center;
+}
+
 code,
 pre,
 kbd,
