@@ -50,7 +50,7 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("src/assets/pdf");
 
-    eleventyConfig.addWatchTarget('styles/**/*.css');
+    eleventyConfig.addWatchTarget('src/styles/index.css');
 
     eleventyConfig.addCollection("projects", function(collectionApi) {
         return collectionApi.getFilteredByTag("project");

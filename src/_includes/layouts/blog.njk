@@ -8,58 +8,33 @@ permalink: "/blog/{{ pagination.PageNumber }}/"
 tags: Page
 ---
 
-<div
-  class="card items-center text-center bg-base-100 mt-4 mb-2 mx-auto"
-  style="max-width: 800px"
->
-  <div class="card-title text-primary mt-4">{{ content | safe }}</div>
+<div class="pagination-body">
+  {%- for post in pagination.items -%}
+  <div class="pagination-item">
+    <h3>
+      <a href="{{post.url}}" class="pagination-post-link">
+        {{post.data.title}}
+      </a>
+    </h3>
 
-  <div class="card-body">
-    {%- for post in pagination.items -%}
-    <div class="border-b pb-4">
-      <h3 class="font-semibold">
-        <a href="{{ post.url }}" class="link link-info">
-          {{ post.data.title }}
-        </a>
-      </h3>
-      <p class="mb-2 text-base-content">{{ post.date.toDateString() }}</p>
-      <div class="post-content text-base-content">
-        <p class="mt-2">
-          {{post.templateContent | truncate(200, true) | safe }}
-        </p>
-      </div>
-    </div>
-    {%- endfor -%}
-    <div class="pagination">
-      <nav aria-labelledby="my-pagination" class="flex justify-center mt-4">
-        <div class="join grid grid-cols-2 gap-4">
-          <!-- Previous Button -->
-          {% if pagination.href.previous %}
-          <a
-            href="{{ pagination.href.previous }}"
-            class="text-primary join-item btn btn-outline"
-          >
-            Previous Page
-          </a>
-          {% else %}
-          <span class="join-item btn btn-outline btn-disabled"
-            >Previous Page</span
-          >
-          {% endif %}
-
-          <!-- Next Button -->
-          {% if pagination.href.next %}
-          <a
-            href="{{ pagination.href.next }}"
-            class="text-primary join-item btn btn-outline"
-          >
-            Next Page
-          </a>
-          {% else %}
-          <span class="join-item btn btn-outline btn-disabled">Next Page</span>
-          {% endif %}
-        </div>
-      </nav>
+    <p class="pagination-post-date">{{post.data.date.toDateString()}}</p>
+    <div class="post-content">
+      <p>{{post.templateContent | truncate(200, true) | safe}}</p>
     </div>
   </div>
+  {%- endfor -%}
+    <nav aria-labelledby="my-pagination" class="pagination-links">
+      {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}" is-="button" box-="round">Prev Post</a>
+      {% else %}
+      <span is-="button" box-="round">Prev Post</span> 
+      {% endif %}
+
+      <!-- Next Button -->
+      {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}" is-="button" box-="round">Next Post</a>
+      {% else %}
+      <span is-="button" box-="round">Next Post</span> 
+      {% endif %}
+    </nav>
 </div>

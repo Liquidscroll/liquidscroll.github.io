@@ -11,9 +11,7 @@
     --monokai6: #f8f8f2;
 
     --monokai-base-bright: $75715e;
-    --monokai-base: #272822
-
-    --monokai-red-bright: #f92672;
+    --monokai-base: #272822 --monokai-red-bright: #f92672;
     --monokai-red: #c72259;
     --monokai-green-bright: #a6e22e;
     --monokai-green: #81b023;

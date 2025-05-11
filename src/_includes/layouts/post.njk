@@ -3,66 +3,23 @@ layout: layouts/base.njk
 permalink: "/posts/{{ Post.fileSlug }}/"
 ---
 
-<div class="card bg-base-100 mt-2 mb-2">
-  <div class="card-body items-center">
-    <h2 class="card-title text-primary">{{ title }}</h2>
-    <h3>{{ date.toDateString() }}</h3>
-    {{ content | safe }}
-    <!-- Pagination Navigation -->
-    <div class="pagination">
-      <nav
-        aria-labelledby="my-pagination"
-        class="flex justify-center space-x-4 mt-4"
-      >
-        <div class="join flex space-x-4">
-          <!-- Previous Button -->
-          {% if previousPost %}
-          <a
-            href="{{ previousPost.url }}"
-            class="text-primary join-item btn btn-outline"
-          >
-            Previous Post
-          </a>
-          {% else %}
-          <span class="join-item btn btn-outline btn-disabled"
-            >Previous Post</span
-          >
-          {% endif %}
+<div class="post-body">
+  <h2>{{title}}</h2>
+  <h3>{{date.toDateString()}}</h3>
+  {{content|safe}}
 
-          <!-- Next Button -->
-          {% if nextPost %}
-          <a
-            href="{{ nextPost.url }}"
-            class="text-primary join-item btn btn-outline"
-          >
-            Next Post
-          </a>
-          {% else %}
-          <span class="join-item btn btn-outline btn-disabled">Next Post</span>
-          {% endif %}
-        </div>
-        {#
-        <ol class="flex space-x-4">
-          <!-- Previous Button -->
-          <li>
-            {% if previousPost %}
-            <a href="{{ previousPost.url }}" class="btn btn-primary">Prev</a>
-            {% else %}
-            <button class="btn btn-disabled">Prev</button>
-            {% endif %}
-          </li>
+  <nav aria-labelledby="my-pagination" class="pagination-links">
+    {% if previousPost %}
+    <a href="{{ previousPost.url }}" is-="button" box-="round">Prev Post</a>
+    {% else %}
+    <span is-="button" box-="round">Prev Post</span>
+    {% endif %}
 
-          <!-- Next Button -->
-          <li>
-            {% if nextPost %}
-            <a href="{{ nextPost.url }}" class="btn btn-primary">Next</a>
-            {% else %}
-            <span class="btn btn-disabled">Next</span>
-            {% endif %}
-          </li>
-        </ol>
-        #}
-      </nav>
-    </div>
-  </div>
+    <!-- Next Button -->
+    {% if nextPost %}
+    <a href="{{ nextPost.url }}" is-="button" box-="round">Next Post </a>
+    {% else %}
+    <span is-="button" box-="round">Next Post</span>
+    {% endif %}
+  </nav>
 </div>

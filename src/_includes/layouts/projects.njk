@@ -2,40 +2,31 @@
 layout: layouts/base.njk
 ---
 
-<div class="card bg-base-100 mt-2 mb-2 mx-auto" style="max-width: 800px">
-  <div class="card-body">
-    <article
-      class="prose prose-headings:text-primary prose-headings:text-center prose-a:link-info"
-    >
-      <h1>Projects</h1>
-      <p>
-        Welcome to my projects page! Here you’ll find a collection of my latest
-        coding and robotics creations, from simple scripts to complex
-        applications. These projects showcase my skills and passions as a
-        computer science student, and I’m excited to share them with you. Take a
-        look around and let me know what you think!
-      </p>
-
-      <table class="table-auto w-full">
-        <thead>
-          <tr>
-            <th class="px-4 py-2">Project</th>
-            <th class="px-4 py-2">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for proj in collections.projects %}
-          <tr>
-            <td class="border px-4 py-2">
-              <a href="{{ proj.url }}">{{ proj.data.title }}</a>
-            </td>
-            <td class="border px-4 py-2">
-              {{ proj.content | truncate(150) | safe }}
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </article>
-  </div>
-</div>
+<article class="projects-overview">
+  <h1>Projects</h1>
+  <p>
+    Welcome to my projects page! Here you’ll find a collection of my latest
+    coding and robotics creations, from simple scripts to complex applications.
+    These projects showcase my skills and passions as a computer science
+    student, and I’m excited to share them with you. Take a look around and let
+    me know what you think!
+  </p>
+  <table class="projects-table">
+    <thead>
+      <tr>
+        <th>Projects</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for proj in collections.projects %}
+      <tr>
+        <td>
+          <a href="{{proj.url}}">{{proj.data.title}}</a>
+        </td>
+        <td>{{ proj.content | truncate(350) | safe}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</article>
