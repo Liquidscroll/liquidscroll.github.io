@@ -28,7 +28,8 @@
     --monokai6: #f8f8f2;
 
     --monokai-base-bright: $75715e;
-    --monokai-base: #272822 --monokai-red-bright: #f92672;
+    --monokai-base: #272822;
+    --monokai-red-bright: #f92672;
     --monokai-red: #c72259;
     --monokai-green-bright: #a6e22e;
     --monokai-green: #81b023;
@@ -67,78 +68,136 @@
 
     p,
     blockquote,
-    l1 [is-~="typography-block"] {
+    li,
+    [is-~="typography-block"] {
       a {
-        color: var(--monokai11);
+        color: var(--monokai-blue-bright);
         text-decoration: underline;
-      }
-      a:hover {
-        color: var(--monokai7);
+        &:hover {
+          color: var(--monokai-blue);
+        }
       }
       code {
-        color: var(--monokai8);
+        color: var(--monokai-orange-bright);
       }
     }
   }
 }
 @layer components {
-  [data-webtui-theme="monokai"] button,
-  [is-~="button"] {
-    /* dark shades */
-    &[variant-="monokai0"] {
-      --button-primary: var(--background0);
-      --button-secondary: var(--foreground0);
-    }
-    &[variant-="monokai1"] {
-      --button-primary: var(--background1);
-      --button-secondary: var(--foreground0);
-    }
-    &[variant-="monokai2"] {
-      --button-primary: var(--background2);
-      --button-secondary: var(--foreground0);
-    }
-    &[variant-="monokai3"] {
-      --button-primary: var(--background3);
-      --button-secondary: var(--foreground0);
-    }
+  [data-webtui-theme="monokai"] {
+    button,
+    [is-~="button"] {
+      /* dark shades */
+      &[variant-="monokai0"] {
+        --button-primary: var(--background0);
+        --button-secondary: var(--foreground0);
+      }
+      &[variant-="monokai1"] {
+        --button-primary: var(--background1);
+        --button-secondary: var(--foreground0);
+      }
+      &[variant-="monokai2"] {
+        --button-primary: var(--background2);
+        --button-secondary: var(--foreground0);
+      }
+      &[variant-="monokai3"] {
+        --button-primary: var(--background3);
+        --button-secondary: var(--foreground0);
+      }
 
-    /* light shades */
-    &[variant-="monokai6"] {
-      --button-primary: var(--foreground0);
-      --button-secondary: var(--background0);
-    }
-    &[variant-="monokai5"] {
-      --button-primary: var(--foreground1);
-      --button-secondary: var(--background0);
-    }
-    &[variant-="monokai4"] {
-      --button-primary: var(--foreground2);
-      --button-secondary: var(--background0);
-    }
-    /* accents */
-    &[variant-="monokai-red"] {
-      --button-primary: var(--monokai-red-bright);
-      --button-secondary: var(--monokai-red);
-    }
-    &[variant-="monokai-orange"] {
-      --button-primary: var(--monokai-orange-bright);
-      --button-secondary: var(--monokai-orange);
-    }
-    &[variant-="monokai-green"] {
-      --button-primary: var(--monokai-green-bright);
-      --button-secondary: var(--monokai-green);
-    }
-    &[variant-="mmonokai-blue"] {
-      --button-primary: var(--monokai-blue-bright);
-      --button-secondary: var(--monokai-blue);
-    }
-    &[variant-="mmonokai-cyan"] {
-      --button-primary: var(--monokai-cyan-bright);
-      --button-secondary: var(--monokai-cyan);
-    }
-    &[variant-="mmonokai-purple"] {
-      --button-primary: var(--monokai-purple-bright);
-      --button-secondary: var(--monokai-purple);
+      /* light shades */
+      &[variant-="monokai6"] {
+        --button-primary: var(--foreground0);
+        --button-secondary: var(--background0);
+      }
+      &[variant-="monokai5"] {
+        --button-primary: var(--foreground1);
+        --button-secondary: var(--background0);
+      }
+      &[variant-="monokai4"] {
+        --button-primary: var(--foreground2);
+        --button-secondary: var(--background0);
+      }
+      /* accents */
+      &[variant-="monokai-base"] {
+        --button-primary: var(--monokai-base-bright);
+        --button-secondary: var(--monokai-base);
+      }
+
+      &[variant-="monokai-base-reverse"] {
+        --button-primary: var(--monokai-base);
+        --button-secondary: var(--monokai-base-bright);
+      }
+
+      &[variant-="monokai-red"] {
+        --button-primary: var(--monokai-red-bright);
+        --button-secondary: var(--monokai-red);
+      }
+
+      &[variant-="monokai-red-reverse"] {
+        --button-primary: var(--monokai-red);
+        --button-secondary: var(--monokai-red-bright);
+      }
+
+      &[variant-="monokai-green"] {
+        --button-primary: var(--monokai-green-bright);
+        --button-secondary: var(--monokai-green);
+      }
+
+      &[variant-="monokai-green-reverse"] {
+        --button-primary: var(--monokai-green);
+        --button-secondary: var(--monokai-green-bright);
+      }
+
+      &[variant-="monokai-orange"] {
+        --button-primary: var(--monokai-orange-bright);
+        --button-secondary: var(--monokai-orange);
+      }
+
+      &[variant-="monokai-orange-reverse"] {
+        --button-primary: var(--monokai-orange);
+        --button-secondary: var(--monokai-orange-bright);
+      }
+
+      &[variant-="monokai-blue"] {
+        --button-primary: var(--monokai-blue-bright);
+        --button-secondary: var(--monokai-blue);
+      }
+
+      &[variant-="monokai-blue-reverse"] {
+        --button-primary: var(--monokai-blue);
+        --button-secondary: var(--monokai-blue-bright);
+      }
+
+      &[variant-="monokai-purple"] {
+        --button-primary: var(--monokai-purple-bright);
+        --button-secondary: var(--monokai-purple);
+      }
+
+      &[variant-="monokai-purple-reverse"] {
+        --button-primary: var(--monokai-purple);
+        --button-secondary: var(--monokai-purple-bright);
+      }
+
+      &[variant-="monokai-cyan"] {
+        --button-primary: var(--monokai-cyan-bright);
+        --button-secondary: var(--monokai-cyan);
+      }
+
+      &[variant-="monokai-cyan-reverse"] {
+        --button-primary: var(--monokai-cyan);
+        --button-secondary: var(--monokai-cyan-bright);
+      }
+
+      &[variant-="monokai-gray"] {
+        --button-primary: var(--monokai-gray-bright);
+        --button-secondary: var(--monokai-gray);
+      }
+
+      &[variant-="monokai-gray-reverse"] {
+        --button-primary: var(--monokai-gray);
+        --button-secondary: var(--monokai-gray-bright);
+      }
     }
   }
 }
@@ -175,28 +234,36 @@
       --badge-text: var(--background0);
     }
 
-    &[variant-="monokai7"] {
-      --badge-color: var(--monokai7);
+    &[variant-="monokai-base"] {
+      --badge-color: var(--monokai-base);
       --badge-text: var(--background0);
     }
-    &[variant-="monokai8"] {
-      --badge-color: var(--monokai8);
+    &[variant-="monokai-red"] {
+      --badge-color: var(--monokai-red);
       --badge-text: var(--background0);
     }
-    &[variant-="monokai9"] {
-      --badge-color: var(--monokai9);
+    &[variant-="monokai-green"] {
+      --badge-color: var(--monokai-green);
       --badge-text: var(--background0);
     }
-    &[variant-="monokai10"] {
-      --badge-color: var(--monokai10);
+    &[variant-="monokai-orange"] {
+      --badge-color: var(--monokai-orange);
       --badge-text: var(--background0);
     }
-    &[variant-="monokai11"] {
-      --badge-color: var(--monokai11);
+    &[variant-="monokai-blue"] {
+      --badge-color: var(--monokai-blue);
       --badge-text: var(--background0);
     }
-    &[variant-="monokai12"] {
-      --badge-color: var(--monokai12);
+    &[variant-="monokai-purple"] {
+      --badge-color: var(--monokai-purple);
+      --badge-text: var(--background0);
+    }
+    &[variant-="monokai-cyan"] {
+      --badge-color: var(--monokai-cyan);
+      --badge-text: var(--background0);
+    }
+    &[variant-="monokai-gray"] {
+      --badge-color: var(--monokai-gray);
       --badge-text: var(--background0);
     }
   }
@@ -268,8 +335,8 @@ p {
   margin-inline: auto;
 }
 p.pagination-post-date {
-    margin-inline: auto;
-    text-align: center;
+  margin-inline: auto;
+  text-align: center;
 }
 code,
 pre,
@@ -400,16 +467,21 @@ blockquote p {
   max-width: none;
 }
 nav.pagination-links {
-    margin-line: auto;
-    text-align: center;
+  margin-line: auto;
+  text-align: center;
 }
 /*
  *
  * Color Overrides
  *
  */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--monokai-green-bright);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--monokai-green-bright);
 }
 /*
  *
@@ -471,7 +543,4 @@ h1, h2, h3, h4, h5, h6 {
 .social-footer a {
   font-size: 2rem;
   color: var(--foreground0);
-}
-[box-] {
-  --box-border-color: var(--foreground2);
 }
