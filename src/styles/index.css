@@ -63,18 +63,23 @@ h6 {
 h1 {
   font-size: 2.5rem;
 }
+
 h2 {
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.75rem;
 }
+
 h4 {
   font-size: 1.5rem;
 }
+
 h5 {
   font-size: 1.25rem;
 }
+
 h6 {
   font-size: 1rem;
 }
@@ -156,7 +161,7 @@ a:hover {
   max-width: 1200px;
   margin-inline: auto;
   padding-block: var(--spacing-lg);
-  padding-inline: var(--spacing-md) 00;
+  padding-inline: var(--spacing-md) 0;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
@@ -165,7 +170,7 @@ a:hover {
 .centered-constrained {
   width: 95%;
   max-width: 1100px;
-  margin-iline: auto;
+  margin-inline: auto;
 }
 
 /*
@@ -219,7 +224,7 @@ tbody tr:nth-child(even) {
 }
 
 aside {
-  backround: var(--background2);
+  background: var(--background2);
   border-left: 4px solid var(--monokai-green-bright);
   padding: var(--spacing-md);
   margin-block: var(--spacing-lg);
@@ -241,7 +246,7 @@ blockquote p {
 }
 
 nav.pagination-links {
-  margin-line: auto;
+  margin-inline: auto;
   text-align: center;
 }
 
@@ -266,6 +271,31 @@ h6 {
  *
  */
 
+/* Skip link; hidden offscreen until focused. Provides a way for keyboard users to skip to the main content. */
+
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--background2);
+  color: var(--foreground0);
+  z-index: 1000;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
 .site-nav {
   display: flex;
   justify-content: space-between;
@@ -273,12 +303,14 @@ h6 {
   gap: 2ch;
   padding: 1lh 4ch;
   font-size: 1.25rem;
+  flex-wrap: wrap;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   gap: 1ch;
+  flex-wrap: wrap;
 }
 
 .site-nav a {
