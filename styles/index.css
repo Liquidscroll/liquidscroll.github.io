@@ -422,6 +422,31 @@ h1.page-title {
   margin-inline: auto;
   text-align: center;
 }
+.responsive-table {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.projects-table th,
+.projects-table td {
+  padding: 0.5rem;
+  vertical-align: top;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+main {
+  max-width: 100%;
+}
+main *,
+.responsive-table,
+.projects-table {
+  box-sizing: border-box;
+}
 table {
   border-collapse: separate;
   border-spacing: 0;
