@@ -9,8 +9,15 @@
     ></script>
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
-  {% include "../components/header.njk" %}
-  <main class="container" box-="square">{{ content | safe }}</main>
-  {% include "../components/footer.njk" %}
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    {% include "../components/header.njk" %}
+    <main id="main-content" class="container" box-="square">
+      {{ content | safe }}
+    </main>
+    {% include "../components/footer.njk" %}
+  </body>
 </html>
