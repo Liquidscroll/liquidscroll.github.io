@@ -6,6 +6,11 @@ const autoprefixer = require('autoprefixer')
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
 module.exports = function(eleventyConfig) {
+    eleventyConfig.setServerOptions({
+        // prints ip to console (e.g. XXX.XXX.X.X) - for connecting from remote devices
+        showAllHosts: true, 
+        port: 8080,
+    });
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		// which file extensions to process
 		extensions: "html",
@@ -35,7 +40,7 @@ module.exports = function(eleventyConfig) {
         try {
             const result = await postcss([
                 postcssImport({
-                    path: 'node_nodules',
+                    path: 'node_modules',
                 }),
                 autoprefixer(),
             ])
