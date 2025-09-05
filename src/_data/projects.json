@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "spice-management-system",
+    "title": "Spice Management System",
+    "role": "Designer & Developer",
+    "dates": "2023",
+    "summary": "An automated spice retrieval system integrating a motorised turntable controlled by an Arduino Nano 33 IoT and a Raspberry Pi GUI. Added voice commands and an Android app for remote monitoring. Provided 3D‑printed parts.",
+    "tech": ["Arduino", "Raspberry Pi", "C++", "Python", "Java", "3D Printing"],
+    "link": "https://github.com/Liquidscroll/SpiceManagementSystem"
+  },
+  {
+    "slug": "splashkit-enhancements",
+    "title": "SplashKit Enhancements",
+    "role": "Contributor",
+    "dates": "2024",
+    "summary": "Contributed to the SplashKit SDK by developing a remote‑control module for Raspberry Pi GPIO pins, writing tutorials for beginners, and fixing bugs in the transpilation tool, including enumeration handling and Docker migration.",
+    "tech": ["C++", "Python", "Ruby", "Raspberry Pi", "Docker"],
+    "link": "https://github.com/Thoth-Tech/splashkit-core"
+  },
+  {
+    "slug": "computer-vision-object-detection-robot",
+    "title": "Computer Vision Object Detection Robot",
+    "role": "Developer",
+    "dates": "2023",
+    "summary": "Built a vision‑based robot that plays with cats using object detection. Integrated robotics and AI to detect and interact with moving objects for pet enrichment.",
+    "tech": ["Arduino", "C++", "Python", "TensorFlow"],
+    "link": ""
+  },
+  {
+    "slug": "feline-feeding-habits-monitoring",
+    "title": "Feline Feeding Habits Monitoring",
+    "role": "Developer",
+    "dates": "2023",
+    "summary": "Designed a weight‑based feeding station to monitor and control cats’ feeding habits, collecting data to promote healthy eating patterns.",
+    "tech": ["Arduino", "C++"],
+    "link": ""
+  }
+]

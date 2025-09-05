@@ -11,20 +11,33 @@ layout: layouts/base.njk
     student, and I’m excited to share them with you. Take a look around and let
     me know what you think!
   </p>
+  <p>
+    Below is a selection of my personal and academic projects. Each entry
+    includes a short summary and the key technologies involved.
+  </p>
   <table class="projects-table">
     <thead>
       <tr>
-        <th>Projects</th>
-        <th>Description</th>
+        <th>Project</th>
+        <th>Summary</th>
+        <th>Tech</th>
+        <th>Link</th>
       </tr>
     </thead>
     <tbody>
-      {% for proj in collections.projects %}
+      {% for proj in projects %}
       <tr>
+        <td>{{ proj.title }}</td>
+        <td>{{proj.summary}}</td>
         <td>
-          <a href="{{proj.url}}">{{proj.data.title}}</a>
+          {%- if proj.tech -%} {{ proj.tech | join(', ') }} {%- else -%} — {%-
+          endif -%}
         </td>
-        <td>{{ proj.content | truncate(350) | safe}}</td>
+        <td>
+          {%- if proj.link -%}
+          <a href="{{ proj.link }}">{{proj.link}}</a>
+          {%- else -%} — {%- endif -%}
+        </td>
       </tr>
       {% endfor %}
     </tbody>
